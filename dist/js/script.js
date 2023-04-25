@@ -60,6 +60,7 @@ const select = {
       thisProduct.data = data;
 
       thisProduct.renderInMenu();
+      thisProduct.initAccordion();
 
       console.log('new Product:', thisProduct);
     }
@@ -83,6 +84,27 @@ const select = {
 
       menuContainer.appendChild(thisProduct.element);
 
+    }
+
+    initAccordion(){
+      const thisProduct = this;
+
+      /* find the clickable trigger (the element that should react to clicking) */
+    const clickableTrigger = article.querySelector(select.menuProduct.clickable);
+
+    /* START: add event listener to clickable trigger on event click */
+    clickableTrigger.addEventListener('click', function(event) {
+      /* prevent default action for event */
+      event.preventDefault();
+      /* find active product (product that has active class) */
+      const activeProduct = article.querySelectorAll('active');
+      /* if there is active product and it's not thisProduct.element, remove class active from it */
+      if(activeProduct !== null && activeProduct !== thisProduct.element){
+       activeProduct.remove('active')
+      }
+      /* toggle active class on thisProduct.element */
+      thisProduct.element.toggle('active');
+    });
     }
   }
 
