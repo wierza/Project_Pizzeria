@@ -27,7 +27,7 @@ const select = {
     },
     widgets: {
       amount: {
-        iinput: 'input.amount', // CODE CHANGED
+        input: 'input.amount', // CODE CHANGED
         linkDecrease: 'a[href="#less"]',
         linkIncrease: 'a[href="#more"]',
       },
@@ -178,6 +178,7 @@ cartProduct: {
       thisProduct.cartButton.addEventListener('click', function(event){
         event.preventDefault();
         thisProduct.processOrder();
+        thisProduct.addToCart();
       });
     }
 
@@ -305,6 +306,10 @@ announce(){
       thisWidget.setValue(thisWidget.value + 1);
     });
   }
+  addToCart(){
+const thisProduct = this;
+app.cart.add(thisProduct);
+  }
 }
 class Cart{
   constructor(element){
@@ -313,7 +318,7 @@ class Cart{
     thisCart.products = [];
 
     thisCart.getElements(element);
-    thisCart.initActions(element);
+    thisCart.initActions();
 
     console.log('new Cart', thisCart)
   }
@@ -327,6 +332,7 @@ class Cart{
     thisCart.dom.toggleTrigger = thisCart.dom.wrapper.querySelector(select.cart.toggleTrigger);
 
   }
+
   initActions(){
   const thisCart = this;
   thisCart.dom.toggleTrigger.addEventListener('clik', function(event){
@@ -334,6 +340,13 @@ class Cart{
     thisCart.dom.wrapper.classList.toggle(classNames.cart.wrapperActive);
   });
   }
+
+  add(menuProduct){
+    //const thisCart = this;
+
+    console.log('adding product', menuProduct);
+  }
+
 }
 const app = {
     initMenu: function(){
@@ -355,7 +368,7 @@ const app = {
       thisApp.data = dataSource;
     },
 
-    initCart: function(){
+    initCart(){
       const thisApp = this;
     
       const cartElem = document.querySelector(select.containerOf.cart);
