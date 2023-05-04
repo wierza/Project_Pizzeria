@@ -228,13 +228,13 @@ cartProduct: {
             }
           }
         }
-      
+      }
       /*multiply price by amount*/
       price *= thisProduct.amountWidget.value;
       thisProduct.priceSingle = price;
       // update calculated price in the HTML
       thisProduct.priceElem.innerHTML = price;
-    } 
+     
     }
   
   initAmountWidget(){
@@ -247,7 +247,7 @@ cartProduct: {
   }
   addToCart(){
     const thisProduct = this;
-    app.cart.add(thisProduct.prepareCartProduct);
+    app.cart.add(thisProduct.prepareCartProduct());
       }
 
   prepareCartProduct(){
@@ -277,7 +277,7 @@ cartProduct: {
       params[paramId] = {
         label: param.label,
         options: {}
-      }
+      };
   
       // for every option in this category
       for(let optionId in param.options) {
@@ -365,7 +365,7 @@ class Cart{
     thisCart.products = [];
 
     thisCart.getElements(element);
-    thisCart.initActions();
+    thisCart.initActions(element);
 
     //console.log('new Cart', thisCart)
   }
@@ -434,7 +434,9 @@ class Cart{
     thisCart.dom.totalNumber.innerHTML = thisCart.totalNumber;
     thisCart.dom.subtotalPrice.innerHTML = thisCart.subtotalPrice;
     thisCart.dom.deliveryFee.innerHTML = deliveryFee;
-    thisCart.dom.totalPrice.innerHTML = thisCart.totalPrice;
+    for (let price of thisCart.dom.totalPrice){
+      price.innerHTML = thisCart.totalPrice;
+    }
   }
 
 }
