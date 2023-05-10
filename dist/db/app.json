@@ -206,18 +206,22 @@
     {
       "address": "",
       "phone": "",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
+      "totalPrice": null,
+      "subtotalPrice": null,
+      "totalNumber": null,
       "deliveryFee": 20,
       "products": [
         {
           "id": "cake",
-          "amount": 1,
-          "price": 9,
-          "priceSingle": 9,
-          "name": "Zio Stefano's Doughnut",
-          "params": {}
+          "priceSingle": 18
+        },
+        {
+          "id": "cake",
+          "priceSingle": 27
+        },
+        {
+          "id": "cake",
+          "priceSingle": 27
         }
       ],
       "id": 1
@@ -225,21 +229,94 @@
     {
       "address": "",
       "phone": "",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
+      "totalPrice": null,
+      "subtotalPrice": null,
+      "totalNumber": null,
       "deliveryFee": 20,
       "products": [
         {
           "id": "cake",
-          "amount": 1,
-          "price": 9,
-          "priceSingle": 9,
-          "name": "Zio Stefano's Doughnut",
-          "params": {}
+          "priceSingle": 18
+        },
+        {
+          "id": "cake",
+          "priceSingle": 27
+        },
+        {
+          "id": "cake",
+          "priceSingle": 27
         }
       ],
       "id": 2
+    },
+    {
+      "address": "",
+      "phone": "",
+      "totalPrice": null,
+      "subtotalPrice": null,
+      "totalNumber": null,
+      "deliveryFee": 20,
+      "products": [
+        {
+          "id": "cake",
+          "priceSingle": 18
+        },
+        {
+          "id": "cake",
+          "priceSingle": 27
+        },
+        {
+          "id": "cake",
+          "priceSingle": 27
+        }
+      ],
+      "id": 3
+    },
+    {
+      "address": "",
+      "phone": "",
+      "totalPrice": null,
+      "subtotalPrice": null,
+      "totalNumber": null,
+      "deliveryFee": 20,
+      "products": [
+        {
+          "id": "cake",
+          "priceSingle": 18
+        },
+        {
+          "id": "cake",
+          "priceSingle": 27
+        },
+        {
+          "id": "cake",
+          "priceSingle": 27
+        }
+      ],
+      "id": 4
+    },
+    {
+      "address": "",
+      "phone": "",
+      "totalPrice": null,
+      "subtotalPrice": null,
+      "totalNumber": null,
+      "deliveryFee": 20,
+      "products": [
+        {
+          "id": "cake",
+          "priceSingle": 18
+        },
+        {
+          "id": "cake",
+          "priceSingle": 27
+        },
+        {
+          "id": "cake",
+          "priceSingle": 27
+        }
+      ],
+      "id": 5
     }
   ]
 }
