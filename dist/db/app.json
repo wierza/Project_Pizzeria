@@ -212,16 +212,8 @@
       "deliveryFee": 20,
       "products": [
         {
-          "id": "cake",
-          "priceSingle": 18
-        },
-        {
-          "id": "cake",
-          "priceSingle": 27
-        },
-        {
-          "id": "cake",
-          "priceSingle": 27
+          "id": "breakfast",
+          "priceSingle": 9
         }
       ],
       "id": 1
@@ -235,88 +227,11 @@
       "deliveryFee": 20,
       "products": [
         {
-          "id": "cake",
-          "priceSingle": 18
-        },
-        {
-          "id": "cake",
-          "priceSingle": 27
-        },
-        {
-          "id": "cake",
-          "priceSingle": 27
+          "id": "breakfast",
+          "priceSingle": 9
         }
       ],
       "id": 2
-    },
-    {
-      "address": "",
-      "phone": "",
-      "totalPrice": null,
-      "subtotalPrice": null,
-      "totalNumber": null,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "priceSingle": 18
-        },
-        {
-          "id": "cake",
-          "priceSingle": 27
-        },
-        {
-          "id": "cake",
-          "priceSingle": 27
-        }
-      ],
-      "id": 3
-    },
-    {
-      "address": "",
-      "phone": "",
-      "totalPrice": null,
-      "subtotalPrice": null,
-      "totalNumber": null,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "priceSingle": 18
-        },
-        {
-          "id": "cake",
-          "priceSingle": 27
-        },
-        {
-          "id": "cake",
-          "priceSingle": 27
-        }
-      ],
-      "id": 4
-    },
-    {
-      "address": "",
-      "phone": "",
-      "totalPrice": null,
-      "subtotalPrice": null,
-      "totalNumber": null,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "priceSingle": 18
-        },
-        {
-          "id": "cake",
-          "priceSingle": 27
-        },
-        {
-          "id": "cake",
-          "priceSingle": 27
-        }
-      ],
-      "id": 5
     }
   ]
 }

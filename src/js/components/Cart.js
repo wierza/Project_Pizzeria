@@ -1,5 +1,5 @@
 import { select, classNames, templates, settings } from "../settings.js";
-import {utils} from '../utils.js';
+import utils from '../utils.js';
 import CartProduct from "./CartProduct.js";
 
 class Cart{
@@ -51,8 +51,6 @@ class Cart{
   
     add(menuProduct){
       const thisCart = this;
-  
-      console.log('adding product', menuProduct);
   
       /*generate HTML based on template*/
   
@@ -122,7 +120,12 @@ class Cart{
         body: JSON.stringify(payload),
       };
       
-      fetch(url, options);
+      fetch(url, options)
+      .then(function (response){
+        return response.json();
+      }).then(function (parsedResponse){
+        console.log('parsedResponse:', parsedResponse);
+      });
     }
   }
 

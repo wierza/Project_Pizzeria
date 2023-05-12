@@ -5,16 +5,12 @@ import Cart from './components/Cart.js';
 const app = {
     initMenu: function(){
 
-      const thisApp = this;
-
-      //console.log('thisApp.data:', thisApp.data);  
+      const thisApp = this;  
 
       for(let productData in thisApp.data.products){
         new Product(thisApp.data.products[productData].id, thisApp.data.products[productData]);
       }
-
-      
-    },
+ },
 
     initData: function(){
       const thisApp = this;
@@ -27,13 +23,14 @@ const app = {
         return rawResponse.json();
       })
       .then(function(parsedResponse){
-        console.log('parsedResponse', parsedResponse);
         /*save parsedResponse as thisApp.data.products*/
         thisApp.data.products = parsedResponse;
         /*execute initMenu method*/
         thisApp.initMenu();
+      })
+      .catch(function (error){
+        console.error('Error while fetching products:', error);
       });
-      console.log('thisApp.data', JSON.stringify(thisApp.data));
     },
 
     initCart(){
@@ -52,15 +49,8 @@ const app = {
     },
 
     init: function(){
-      const thisApp = this;
-      //console.log('*** App starting ***');
-      //console.log('thisApp:', thisApp);
-      //console.log('classNames:', classNames);
-      //console.log('settings:', settings);
-      //console.log('templates:', templates);
-     
-      thisApp.initData();
-      
+      const thisApp = this;   
+      thisApp.initData();   
       thisApp.initCart();
 
     },

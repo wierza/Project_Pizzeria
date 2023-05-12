@@ -4,9 +4,6 @@ class AmountWidget {
     constructor(element) {
       const thisWidget = this;
   
-      //console.log('AmountWidget:', thisWidget);
-      //console.log('constructor arguments:', element);
-  
       thisWidget.getElements(element);
       thisWidget.setValue(thisWidget.input.value || settings.amountWidget.defaultValue);
       thisWidget.initActions();
@@ -41,7 +38,7 @@ class AmountWidget {
     }
   announce(){
     const thisWidget = this;
-    const event = new CustomEvent('updated',{
+    const event = new CustomEvent('updated', { 
       bubbles: true
     });
     thisWidget.element.dispatchEvent(event);

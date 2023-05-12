@@ -1,5 +1,5 @@
 import { select, classNames, templates } from "../settings.js";
-import {utils} from '../utils.js';
+import utils from '../utils.js';
 import AmountWidget from "./AmountWidget.js";
 
 class Product{
@@ -16,16 +16,14 @@ class Product{
       thisProduct.initAmountWidget();
       thisProduct.processOrder();
       
-    
-      //console.log('new Product:', thisProduct);
     }
+
     renderInMenu(){
       const thisProduct = this;
 
       /*generate HTML based on template*/
 
       const generatedHTML = templates.menuProduct(thisProduct.data);
-      //console.log('generated HTML', generatedHTML);
 
       /*create element using utils.createElementFromHTML*/
 
@@ -117,7 +115,6 @@ class Product{
         for(let optionId in param.options) {
           // determine option value, e.g. optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
           const option = param.options[optionId];
-          //console.log(optionId, option);
 
           // check if there is param with a name of paramId in formData and if it includes optionId
           if(formData[paramId] && formData[paramId].includes(optionId)) {
@@ -126,6 +123,7 @@ class Product{
               // add option price to price variable
               price += option.price;
             }
+
           }else {
             // check if the option is default
             if(option.default) {
