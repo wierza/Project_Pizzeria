@@ -81,9 +81,9 @@ const app = {
         /*execute initMenu method*/
         thisApp.initMenu();
       })
-      .catch(function (error){
+      /*.catch(function (error){
         console.error('Error while fetching products:', error);
-      });
+      });*/
     },
 
     initCart(){
