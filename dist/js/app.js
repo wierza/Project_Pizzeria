@@ -2,9 +2,10 @@ import {settings, select, classNames} from './settings.js';
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
 import Booking from './components/Booking.js'; 
+import Home from './components/Home.js';
 
 const app = {
-    initPAges: function(){
+    initPages: function(){
       const thisApp = this;
 
       thisApp.pages = document.querySelector(select.containerOf.pages).children;
@@ -107,9 +108,17 @@ const app = {
       thisApp.booking = new Booking(thisApp.bookingPage);
     },
 
+    
+
+    initHome: function(){
+      const thisApp = this;
+      const homeElem = document.querySelector(select.containerOf.home);
+      thisApp.homeElem = new Home(homeElem, thisApp);
+    },
+
     init: function(){
       const thisApp = this; 
-      thisApp.initPAges();  
+      thisApp.initPages();  
       thisApp.initData();   
       thisApp.initCart();
       thisApp.initBooking();

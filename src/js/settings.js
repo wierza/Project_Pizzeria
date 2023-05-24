@@ -3,12 +3,14 @@ export const select = {
       menuProduct: "#template-menu-product",
       cartProduct: '#template-cart-product', // CODE ADDED
       bookingWidget: '#template-booking-widget',
+      homeWidget: '#template-home-widget',
       },
       containerOf: {
         menu: '#product-list',
         cart: '#cart',
         pages: '#pages',
         booking: '.booking-wrapper',
+        home: '.home-wrapper',
       },
       all: {
         menuProducts: '#product-list > .product',
@@ -43,6 +45,17 @@ export const select = {
       peopleAmount: '.people-amount',
       hoursAmount: '.hours-amount',
       tables: '.floor-plan .table',
+      floor: '.floor-plan',
+      duration: '[name="hours"]',
+      people: '[name="people"]',
+      submit: '.booking-form [type="submit"]',
+      address: '[name="address"]',
+      phone: '[name="phone"]',
+      starters: 'input[type="checkbox"]',
+  },
+  home: {
+    homeHeader: '.navigation',
+    dataId: 'id-data',
   },
   nav: {
       links: '.main-nav a',
@@ -84,6 +97,7 @@ export const select = {
     booking: {
       loading: 'loading',
       tableBooked: 'booked',
+      tableSelected: 'selected',
   },
   nav: {
       active: 'active',
@@ -119,8 +133,8 @@ export const select = {
         orders: 'orders',
         product: 'product',
         order: 'order',
-        booking: 'booking',
-        event: 'event',
+        bookings: 'bookings',
+        events: 'events',
         dateStartParamKey: 'date_gte',
         dateEndParamKey: 'date_lte',
         notRepeatParam: 'repeat=false',
@@ -132,4 +146,5 @@ export const select = {
       menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
       cartProduct: Handlebars.compile(document.querySelector(select.templateOf.cartProduct).innerHTML),
       bookingWidget: Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
+      homeWidget: Handlebars.compile(document.querySelector(select.templateOf.homeWidget).innerHTML),
     };
