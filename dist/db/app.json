@@ -265,7 +265,7 @@
   ],
   "bookings": [
     {
-      "hour": "12:00",
+      "hour": "14:00",
       "table": null,
       "duration": 1,
       "ppl": 1,
@@ -275,122 +275,14 @@
       "id": 1
     },
     {
-      "hour": "18:30",
+      "hour": "12:00",
       "table": null,
       "duration": 1,
       "ppl": 1,
-      "starters": [
-        "water",
-        "bread"
-      ],
+      "starters": [],
       "phone": "",
       "adress": "",
       "id": 2
-    },
-    {
-      "hour": "17:30",
-      "table": null,
-      "duration": 1,
-      "ppl": 1,
-      "starters": [
-        "water"
-      ],
-      "phone": "",
-      "adress": "",
-      "id": 3
-    },
-    {
-      "hour": "12:00",
-      "table": null,
-      "duration": 2,
-      "ppl": 1,
-      "starters": [
-        "water"
-      ],
-      "phone": "",
-      "adress": "",
-      "id": 4
-    },
-    {
-      "hour": "17:00",
-      "table": null,
-      "duration": 2,
-      "ppl": 1,
-      "starters": [
-        "water"
-      ],
-      "phone": "",
-      "adress": "",
-      "id": 5
-    },
-    {
-      "hour": "17:00",
-      "table": null,
-      "duration": 2,
-      "ppl": 1,
-      "starters": [
-        "water",
-        "bread"
-      ],
-      "phone": "",
-      "adress": "",
-      "id": 6
-    },
-    {
-      "hour": "15:30",
-      "table": null,
-      "duration": 2,
-      "ppl": 1,
-      "starters": [],
-      "phone": "42434234",
-      "adress": "dawid",
-      "id": 7
-    },
-    {
-      "hour": "15:30",
-      "table": null,
-      "duration": 2,
-      "ppl": 1,
-      "starters": [],
-      "phone": "42434234",
-      "adress": "dawid",
-      "id": 8
-    },
-    {
-      "hour": "16:00",
-      "table": null,
-      "duration": 3,
-      "ppl": 1,
-      "starters": [],
-      "phone": "42434234",
-      "adress": "dawid",
-      "id": 9
-    },
-    {
-      "hour": "16:00",
-      "table": null,
-      "duration": 3,
-      "ppl": 4,
-      "starters": [
-        "water",
-        "bread"
-      ],
-      "phone": "42434234",
-      "adress": "dawid",
-      "id": 10
-    },
-    {
-      "hour": "16:00",
-      "table": null,
-      "duration": 3,
-      "ppl": 4,
-      "starters": [
-        "water",
-        "bread"
-      ],
-      "phone": "42434234",
-      "adress": "dawid",
-      "id": 11
     }
   ]
 }
